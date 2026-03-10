@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+}
+/*PHẦN BÊN TRÁI*/
+.benTrai {
+    width: 576px;
+    height: 1080px;
+    border: 2px solid black;
+    background-color: #FFF6F0;
+    display: grid;
+    grid-template-rows: 0.3fr 3fr;
+}
+
+.benTrai div:nth-child(1) {
+    width: 576px;
+    height: 200px;
+    grid-row: 1/2;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benTrai div:nth-child(2) {
+    width: 576px;
+    height: 200px;
+    grid-row: 2/3;
+    font-size: 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.benTrai div:nth-child(2) button {
+    text-align: left;
+    font-size: 20px;
+    border: 0;
+    background-color: transparent;
+    width: 150px;
+}
+
+/*HET PHAN BEN TRAI*/
+.benPhai {
+    width: 1344px;
+    height: 1080px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benPhai div:nth-child(1) {
+    width: 1144px;
+    height: 1080px;
+    border: 2px solid black;
+}
+
+.benPhai div div:nth-child(1) {
+    width: 1144px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.benPhai div div:nth-child(2) {
+    width: 1144px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 70px;
+    padding-left: 100px;
+    font-size: 30px;
+}
+
+/* dialog */
+
+dialog[open] {
+    width: 1000px;
+    height: 900px;
+    display: flex;
+    justify-self: center;
+}
+
+dialog::backdrop {
+    background-color: aqua;
+}
+
+dialog form {
+    width: 1000px;
+    height: 900px;
+    display: grid;
+    justify-self: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.3fr 1fr;
+}
+
+dialog form label:nth-child(1n) {
+    align-self: center;
+    margin-left: 100px;
+}
+
+dialog form input:nth-child(1n) {
+    width: 200px;
+    height: 30px;
+    align-self: center;
+}
+
+#sumbit {
+    grid-column: 2/3;
+}
