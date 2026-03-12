@@ -1,0 +1,21 @@
+.benTrai div:nth-child(2)
+
+ let i = 1
+    for (let item in obj) {
+        if (item == "project") {
+            let h3 = document.createElement("h3")
+            let button = document.createElement("button")
+            domNode.node = button
+            button.textContent = `${obj[item]}`
+            h3.textContent = `${obj[item]}`
+            theDivThuNhat.appendChild(h3)
+            leftTheDivHai.appendChild(button)
+        } 
+        if (item != "project") {
+        let pChild = document.querySelector(`.benPhai div div:nth-child(2) p:nth-child(${i})`)
+        let p = document.createElement("p")
+        p.textContent = `${obj[item]}`
+        pChild.appendChild(p)
+        i++
+    }
+}

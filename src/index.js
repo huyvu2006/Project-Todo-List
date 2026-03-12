@@ -1,3 +1,2 @@
 import "./styles.css";
-import { sumbit } from "./dom";
-
+import { sumbit,deleteDomNode} from "./dom";
